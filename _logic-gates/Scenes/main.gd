@@ -13,9 +13,9 @@ var active_line_name: String = ""
 
 func _ready() -> void:
 	for child in get_children():
-		if child is Area2D:  # Skontroluj, či je dieťa typu Area2D
-			for grandchild in child.get_children():  # Iteruj cez deti tohto Area2D
-				if grandchild is Area2D:  # Ak je poddieťa tiež Area2D, získaj ho
+		if child is Area2D: 
+			for grandchild in child.get_children(): 
+				if grandchild is Area2D:  
 					grandchild.connect("is_mouse_entered", Callable(self, "_on_area_mouse_entered"))
 					grandchild.connect("is_mouse_exited", Callable(self, "_on_area_mouse_exited"))
 
