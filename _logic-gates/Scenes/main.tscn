@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://baxnv47ennu54"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_6p5eg"]
+[ext_resource type="PackedScene" uid="uid://cc6hewgn8f374" path="res://Scenes/logic_gate.tscn" id="2_xqucj"]
+
+[sub_resource type="GDScript" id="GDScript_cb0dv"]
+script/source = "extends Area2D
+
+#signal is_mouse_entered
+#signal is_mouse_exited
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass
+	#for child in get_children():
+		#if child is Area2D:
+			#child.connect(\"is_mouse_entered\", Callable(self, \"_on_area_mouse_entered\"))
+			#child.connect(\"is_mouse_exited\", Callable(self, \"_on_area_mouse_exited\"))
+#
+#
+#func _on_area_mouse_entered(area_name: String, position: Vector2):
+	#emit_signal(\"is_mouse_entered\", name+\"#\"+area_name, position)
+#
+#func _on_area_mouse_exited():
+	#emit_signal(\"is_mouse_exited\")
+"
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_6p5eg")
+
+[node name="Logic_Gate" parent="." instance=ExtResource("2_xqucj")]
+position = Vector2(240, 128)
+script = SubResource("GDScript_cb0dv")
+
+[node name="Logic_Gate2" parent="." instance=ExtResource("2_xqucj")]
+position = Vector2(744, 296)
+script = SubResource("GDScript_cb0dv")
+
+[node name="Logic_Gate3" parent="." instance=ExtResource("2_xqucj")]
+position = Vector2(248, 392)
+script = SubResource("GDScript_cb0dv")

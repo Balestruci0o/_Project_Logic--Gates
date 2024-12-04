@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://baxnv47ennu54"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_6p5eg"]
+[ext_resource type="PackedScene" uid="uid://bjpccy0a5gemn" path="res://Scenes/area_2d.tscn" id="2_188fe"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_6p5eg")
+
+[node name="Area2D" parent="." instance=ExtResource("2_188fe")]
+position = Vector2(80, 112)
+
+[node name="Area2D2" parent="." instance=ExtResource("2_188fe")]
+position = Vector2(552, 32)
+
+[node name="Area2D3" parent="." instance=ExtResource("2_188fe")]
+position = Vector2(552, 208)
