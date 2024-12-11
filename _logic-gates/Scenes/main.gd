@@ -43,6 +43,8 @@ func _input(event: InputEvent) -> void:
 			if is_drawing_line:
 				if current_area_name != previous_area_name and not has_connection(current_area_name, previous_area_name):
 					add_connection(active_line_name, current_area_name, previous_area_name)
+				elif has_connection(current_area_name, previous_area_name):
+					delete_active_line()
 				elif current_area_name == previous_area_name:
 					delete_connections_for_area(current_area_name)
 					delete_active_line()
