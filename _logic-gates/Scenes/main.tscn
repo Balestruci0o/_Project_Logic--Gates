@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://baxnv47ennu54"]
+[gd_scene load_steps=5 format=3 uid="uid://baxnv47ennu54"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_6p5eg"]
 [ext_resource type="PackedScene" uid="uid://cc6hewgn8f374" path="res://Scenes/logic_gate.tscn" id="2_xqucj"]
+[ext_resource type="PackedScene" uid="uid://dttfgygafs2ru" path="res://spínač.tscn" id="3_vu81c"]
 
 [sub_resource type="GDScript" id="GDScript_cb0dv"]
 script/source = "extends Area2D
@@ -40,3 +41,6 @@ script = SubResource("GDScript_cb0dv")
 [node name="Logic_Gate3" parent="." instance=ExtResource("2_xqucj")]
 position = Vector2(248, 392)
 script = SubResource("GDScript_cb0dv")
+
+[node name="Spínač" parent="." instance=ExtResource("3_vu81c")]
+position = Vector2(49, 265)

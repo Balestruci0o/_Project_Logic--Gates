@@ -4,3 +4,5 @@ res://Scenes/logic_gate.tscn
 res://Scenes/main.gd
 res://Scenes/logic_gate.gd
 res://Scenes/area_2d.gd
+res://spínač.tscn
+res://spínač.gd
