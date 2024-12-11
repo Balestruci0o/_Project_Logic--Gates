@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1733330881
+::res://::1733908057
 icon.svg::CompressedTexture2D::2629322947780612234::1733330657::1733330816::1::::<><>::
 ::res://addons/::1733330656
 ::res://addons/godot-git-plugin/::1733330656
@@ -8,11 +8,11 @@ plugin.cfg::TextFile::-1::1733330656::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1733330656::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1733330656
 ::res://addons/godot-git-plugin/macos/::1733330656
-::res://addons/godot-git-plugin/win64/::1733330878
-::res://Scenes/::1733330850
+::res://addons/godot-git-plugin/win64/::1733908050
+::res://Scenes/::1733854414
 area_2d.gd::GDScript::-1::1733330656::0::1::::<>Area2D<>::
-area_2d.tscn::PackedScene::3049212247540476677::1733330656::0::1::::<><>::res://Scenes/area_2d.gd<>uid://bdpwtg568qcl3::::res://icon.svg
-logic_gate.tscn::PackedScene::4977648092580624037::1733330656::0::1::::<><>::uid://b8pnfmuftgbb3::::res://Scenes/R2175566-03.webp<>uid://bjpccy0a5gemn::::res://Scenes/area_2d.tscn
-main.gd::GDScript::-1::1733330850::0::1::::<>Node2D<>::
-main.tscn::PackedScene::2434729767424987425::1733330850::0::1::::<><>::res://Scenes/main.gd<>uid://cc6hewgn8f374::::res://Scenes/logic_gate.tscn
+area_2d.tscn::PackedScene::3049212247540476677::1733854406::0::1::::<><>::res://Scenes/area_2d.gd<>uid://bdpwtg568qcl3::::res://icon.svg
+logic_gate.tscn::PackedScene::4977648092580624037::1733854406::0::1::::<><>::uid://b8pnfmuftgbb3::::res://Scenes/R2175566-03.webp<>uid://bjpccy0a5gemn::::res://Scenes/area_2d.tscn
+main.gd::GDScript::-1::1733854414::0::1::::<>Node2D<>::
+main.tscn::PackedScene::2434729767424987425::1733854405::0::1::::<><>::res://Scenes/main.gd<>uid://cc6hewgn8f374::::res://Scenes/logic_gate.tscn
 R2175566-03.webp::CompressedTexture2D::4734417101363649474::1733330656::1733330816::1::::<><>::

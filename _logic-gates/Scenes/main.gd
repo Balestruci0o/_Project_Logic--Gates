@@ -20,7 +20,7 @@ func _ready() -> void:
 					grandchild.connect("is_mouse_exited", Callable(self, "_on_area_mouse_exited"))
 
 func _on_area_mouse_entered(area_name: String, position: Vector2) -> void:
-	current_area_name = area_name+"#"+str(randi_range(1,100000000000))
+	current_area_name = area_name
 	is_hovering_area = true
 	hover_position = position
 
@@ -83,7 +83,11 @@ func delete_active_line() -> void:
 func delete_connections_for_area(area_name: String) -> void:
 	var keys_to_remove: Array[String] = []
 	for line_name in area_connections:
+		print(line_name)
+		print(area_name)
+		print(area_connections[line_name])
 		if area_name in area_connections[line_name]:
+			print("K")
 			var line_node = get_node_or_null(line_name)
 			if line_node:
 				line_node.queue_free()
