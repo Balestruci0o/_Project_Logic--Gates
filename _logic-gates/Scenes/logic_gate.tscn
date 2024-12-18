@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc6hewgn8f374"]
+[gd_scene load_steps=4 format=3 uid="uid://cc6hewgn8f374"]
 
-[ext_resource type="Script" path="res://Scenes/logic_gate.gd" id="1_8ejau"]
 [ext_resource type="Texture2D" uid="uid://b8pnfmuftgbb3" path="res://Scenes/R2175566-03.webp" id="1_bg8yk"]
 [ext_resource type="PackedScene" uid="uid://bjpccy0a5gemn" path="res://Scenes/area_2d.tscn" id="2_kugpj"]
 
@@ -8,7 +7,6 @@
 size = Vector2(240, 176)
 
 [node name="Logic_Gate" type="Area2D"]
-script = ExtResource("1_8ejau")
 
 [node name="R2175566-03" type="Sprite2D" parent="."]
 position = Vector2(-7.62939e-06, 0)
