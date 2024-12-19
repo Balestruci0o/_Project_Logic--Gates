@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cc6hewgn8f374"]
 
 [ext_resource type="Texture2D" uid="uid://b8pnfmuftgbb3" path="res://Scenes/R2175566-03.webp" id="1_bg8yk"]
-[ext_resource type="PackedScene" uid="uid://bjpccy0a5gemn" path="res://Scenes/area_2d.tscn" id="2_kugpj"]
+[ext_resource type="PackedScene" uid="uid://bjpccy0a5gemn" path="res://Scenes/dot.tscn" id="2_kugpj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eovh"]
 size = Vector2(240, 176)
@@ -13,14 +13,14 @@ position = Vector2(-7.62939e-06, 0)
 scale = Vector2(0.385714, 0.385714)
 texture = ExtResource("1_bg8yk")
 
-[node name="Area2D" parent="." instance=ExtResource("2_kugpj")]
-position = Vector2(-120, -24)
+[node name="dot" parent="." instance=ExtResource("2_kugpj")]
+position = Vector2(116, 2)
 
-[node name="Area2D2" parent="." instance=ExtResource("2_kugpj")]
-position = Vector2(-120, 32)
+[node name="dot2" parent="." instance=ExtResource("2_kugpj")]
+position = Vector2(-116, 32)
 
-[node name="Area2D3" parent="." instance=ExtResource("2_kugpj")]
-position = Vector2(112, 0)
+[node name="dot3" parent="." instance=ExtResource("2_kugpj")]
+position = Vector2(-118, -30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1eovh")

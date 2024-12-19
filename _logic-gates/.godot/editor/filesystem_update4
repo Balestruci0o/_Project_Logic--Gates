@@ -1,0 +1,6 @@
+res://Scenes/main.tscn
+res://Scenes/area_2d.gd
+res://Scenes/area_2d.tscn
+res://Scenes/logic_gate.tscn
+res://Scenes/main.gd
+res://Scenes/dot.tscn

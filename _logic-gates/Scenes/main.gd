@@ -14,6 +14,9 @@ var active_line_name: String = ""
 func _ready() -> void:
 	for child in get_children():
 		if child is Area2D: 
+			if child.name == "dot":
+				child.connect("is_mouse_entered", Callable(self, "_on_area_mouse_entered"))
+				child.connect("is_mouse_exited", Callable(self, "_on_area_mouse_exited"))
 			for grandchild in child.get_children(): 
 				if grandchild is Area2D:  
 					grandchild.connect("is_mouse_entered", Callable(self, "_on_area_mouse_entered"))
@@ -47,6 +50,8 @@ func _input(event: InputEvent) -> void:
 					delete_active_line()
 				elif current_area_name == previous_area_name:
 					delete_connections_for_area(current_area_name)
+					print(area_connections)
+					
 					delete_active_line()
 			is_drawing_line = false
 		else:
