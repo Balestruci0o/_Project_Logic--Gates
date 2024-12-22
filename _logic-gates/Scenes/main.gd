@@ -46,13 +46,14 @@ func _input(event: InputEvent) -> void:
 			if is_drawing_line:
 				if current_area_name != previous_area_name and not has_connection(current_area_name, previous_area_name):
 					add_connection(active_line_name, current_area_name, previous_area_name)
-				elif has_connection(current_area_name, previous_area_name):
-					delete_active_line()
 				elif current_area_name == previous_area_name:
 					delete_connections_for_area(current_area_name)
 					print(area_connections)
-					
 					delete_active_line()
+				elif has_connection(current_area_name, previous_area_name):
+					delete_active_line()
+
+					
 			is_drawing_line = false
 		else:
 			delete_active_line()
@@ -91,7 +92,6 @@ func delete_connections_for_area(area_name: String) -> void:
 	var keys_to_remove: Array[String] = []
 	for line_name in area_connections:
 		if area_name in area_connections[line_name]:
-			print("K")
 			var line_node = get_node_or_null(line_name)
 			if line_node:
 				line_node.queue_free()
