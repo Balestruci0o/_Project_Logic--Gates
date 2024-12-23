@@ -10,17 +10,23 @@ var is_drawing_line: bool = false
 var line_segments: Array[Line2D] = []
 var area_connections: Dictionary = {}
 var active_line_name: String = ""
+var ele = false
 
 func _ready() -> void:
 	for child in get_children():
 		if child is Area2D: 
-			if child.name == "dot":
-				child.connect("is_mouse_entered", Callable(self, "_on_area_mouse_entered"))
-				child.connect("is_mouse_exited", Callable(self, "_on_area_mouse_exited"))
+			if child is Area2D && child.name.match("spinac"):
+				child.connect("spinac_on", Callable(self, "_on_spinac"))
 			for grandchild in child.get_children(): 
 				if grandchild is Area2D:  
 					grandchild.connect("is_mouse_entered", Callable(self, "_on_area_mouse_entered"))
 					grandchild.connect("is_mouse_exited", Callable(self, "_on_area_mouse_exited"))
+					grandchild.connect("create_line", Callable(self, "_create_line"))
+
+func _on_spinac(ele):
+	ele = ele
+	print(ele)
+	
 
 func _on_area_mouse_entered(area_name: String, position_mouse: Vector2) -> void:
 	current_area_name = area_name
@@ -29,6 +35,10 @@ func _on_area_mouse_entered(area_name: String, position_mouse: Vector2) -> void:
 
 func _on_area_mouse_exited() -> void:
 	is_hovering_area = false
+	
+func _create_line():
+	active_line_name = create_new_line()
+	print(active_line_name)
 
 func _process(_delta: float) -> void:
 	if is_drawing_line and line_segments:

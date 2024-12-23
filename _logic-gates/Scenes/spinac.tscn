@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnsxrdnawgo0b"]
+
+[ext_resource type="Script" path="res://Scenes/spinac.gd" id="1_w7y0u"]
+[ext_resource type="Texture2D" uid="uid://dnl8xqencjbc2" path="res://Scenes/stiahnuť.png" id="1_wvv5h"]
+[ext_resource type="PackedScene" uid="uid://bjpccy0a5gemn" path="res://Scenes/dot.tscn" id="2_4iwgo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc2o3"]
+size = Vector2(93.5, 94)
+
+[node name="spinac" type="Area2D"]
+script = ExtResource("1_w7y0u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, 0)
+scale = Vector2(1.96939, 1.96939)
+texture = ExtResource("1_wvv5h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-17.75, -1)
+shape = SubResource("RectangleShape2D_cc2o3")
+
+[node name="dot" parent="." instance=ExtResource("2_4iwgo")]
+position = Vector2(75, -1)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

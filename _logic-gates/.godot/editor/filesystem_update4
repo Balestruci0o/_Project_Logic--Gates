@@ -1,4 +1,8 @@
 res://Scenes/main.tscn
+res://Scenes/main.gd
+res://Scenes/spinac.gd
+res://Scenes/spinac.tscn
 res://Scenes/dot.tscn
 res://Scenes/logic_gate.tscn
-res://Scenes/main.gd
+res://Scenes/dot.gd
+res://Scenes/logic_gate.gd

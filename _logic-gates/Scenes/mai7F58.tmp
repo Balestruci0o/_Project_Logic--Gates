@@ -8,13 +8,16 @@
 script = ExtResource("1_6p5eg")
 
 [node name="Logic_Gate" parent="." instance=ExtResource("2_xqucj")]
-position = Vector2(216, 133)
+position = Vector2(230, 92)
 
 [node name="Logic_Gate2" parent="." instance=ExtResource("2_xqucj")]
-position = Vector2(683, 277)
+position = Vector2(878, 440)
 
 [node name="Logic_Gate3" parent="." instance=ExtResource("2_xqucj")]
-position = Vector2(229, 368)
+position = Vector2(232, 275)
 
 [node name="spinac" parent="." instance=ExtResource("3_8k8f7")]
-position = Vector2(99, 536)
+position = Vector2(361, 424)
+
+[node name="spinac2" parent="." instance=ExtResource("3_8k8f7")]
+position = Vector2(361, 549)
